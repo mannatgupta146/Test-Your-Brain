@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Over</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Background color specific to the Game Over page */
+      body.game-over {
+        background-color: #f581c5; /* Customize the background color */
+      }
+    </style>
+  </head>
+  <body class="game-over">
+    <div class="wrapper">
+      <div class="stats-container">
+        <div id="moves-count"></div>
+        <div id="time"></div>
+      </div>
+      <p id="result-message"></p>
+      <button id="play-again">Play Again</button>
+    </div>
+
+    <!-- Script -->
+    <script>
+      // Retrieve game data from localStorage
+      const movesCount = localStorage.getItem("movesCount");
+      const time = localStorage.getItem("time");
+
+      // Display the results
+      document.getElementById("moves-count").textContent = `Moves: ${movesCount}`;
+      document.getElementById("time").textContent = `Time: ${time}`;
+      document.getElementById("result-message").textContent = "Thank You for playing!";
+
+      // Play Again button functionality
+      document.getElementById("play-again").addEventListener("click", () => {
+        // Redirect to the main game page
+        window.location.href = "index.html";
+      });
+    </script>
+  </body>
+</html>
