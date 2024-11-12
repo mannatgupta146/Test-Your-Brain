@@ -77,4 +77,3 @@ If you have any questions or feedback, feel free to open an issue or reach out t
 ---
 
 Enjoy the game! 🎮
-![alt text](image.png)
